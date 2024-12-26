@@ -1,0 +1,2 @@
+# GreenHaven-ePlantShoppingApp
+ Desarrollo de la interfaz de una aplicación de compras para "Green Haven". La aplicación permitirá explorar una amplia variedad de plantas de interior, añadirlas a un carrito de compras, revisar los artículos seleccionados con su costo total y ajustar las cantidades antes de proceder al pago. Este proyecto utiliza y amplía habilidades de prácticas previas, integrando componentes y código existentes con actualizaciones para lograr una experiencia de usuario intuitiva y funcional.
