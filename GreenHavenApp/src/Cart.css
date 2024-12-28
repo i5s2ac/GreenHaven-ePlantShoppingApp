@@ -1,0 +1,226 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    height: auto;
+}
+
+.cart-page {
+    padding: 0px 0px;
+    background-color: hsl(0, 0%, 98%);
+    font-size: 1rem;
+    max-width: 1200px;
+    margin: 0px auto;
+    padding-bottom: 170px; 
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-height: 600px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.cart-items::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cart-items::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.cart-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+.cart-item-image {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 25px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.cart-item-details h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.cart-item-details p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.cart-item-details .price {
+    font-weight: bold;
+    color: #4caf50;
+    font-size: 1.1rem;
+}
+
+.cart-item-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.cart-item-actions button {
+    flex: 1;
+    padding: 12px 0;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cart-item-actions button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.cart-item-actions .delete-button {
+    background-color: #f9230b;
+}
+
+.cart-item-actions .delete-button:hover {
+    background-color: #d1210e;
+}
+
+.cart-item-actions .decrease-button {
+    background-color: #35d1df;
+}
+
+.cart-item-actions .decrease-button:hover {
+    background-color: #1d9edf;
+}
+
+.cart-summary {
+    position: fixed; 
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 100%; 
+    max-width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+}
+
+.cart-items {
+    margin-bottom: 500px; 
+}
+
+.cart-summary h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cart-summary .cart-buttons {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 10px; 
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.cart-summary .cart-buttons button {
+    flex: 1;
+    padding: 15px 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cart-summary .cart-buttons button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item-image {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
+    }
+
+    .cart-item-details {
+        width: 100%;
+    }
+
+    .cart-item-actions {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .cart-summary button {
+        font-size: 0.95rem;
+        padding: 12px 0;
+    }
+
+   
+
+}
+
+@media (max-width: 480px) {
+    .cart-item-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .cart-item-actions button {
+        font-size: 0.85rem;
+        padding: 8px 0;
+    }
+
+    .cart-summary h2 {
+        font-size: 1.3rem;
+    }
+}

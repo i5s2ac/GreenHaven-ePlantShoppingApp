@@ -1,0 +1,114 @@
+.navbar {
+    width: 100%;  
+    position: fixed;  
+    top: 0;
+    left: 0;
+    z-index: 1000;  
+    background-color: #333;  
+    padding: 10px 5%;  
+}
+  
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+  
+.logo-GH {
+    width: 100px;
+    height: 50px;
+    background-image: url("./assets/GreenHavenLogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+  
+.navbar-center {
+    flex: 2;
+    text-align: center;
+}
+  
+.navbar-link {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+  
+.cart {
+    flex: 0.5;
+    text-align: center;
+    position: relative; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.cart-icon {
+    width: 30px;  
+    height: auto;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.cart-count-container {
+    position: absolute;
+    top: 0px;  
+    left: 20px;  
+}
+
+.cart-count {
+    background-color: green;  
+    color: white; 
+    border-radius: 50%;  
+    padding: 5px 10px;  
+    font-weight: bold;
+    font-size: 14px;  
+    min-width: 20px;  
+    min-height: 20px;  
+    text-align: center;  
+    line-height: 20px;  
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;  
+        text-align: center;
+    }
+
+    .navbar-link {
+        font-size: 16px; 
+        margin: 5px 0;
+    }
+
+    .cart {
+        flex: 1;
+        margin-top: 10px;  
+    }
+
+    .cart-icon {
+        width: 25px;  
+    }
+
+    .cart-count {
+        font-size: 12px;  
+        padding: 3px 8px;  
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-GH {
+        width: 80px;  
+        height: 40px;
+    }
+
+    .cart-icon {
+        width: 20px;  
+    }
+
+    .cart-count {
+        font-size: 10px;  
+        padding: 2px 5px;  
+    }
+}
